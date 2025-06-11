@@ -1,0 +1,150 @@
+services:
+  traefik:
+    image: traefik:v3.4
+    container_name: traefik
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+      - "8080:8080"
+    command:
+      - "--log.level=DEBUG"
+      - "--api=true"
+      - "--providers.docker=true"
+      - "--entryPoints.web.address=:80"
+      - "--entryPoints.websecure.address=:443"
+
+      - "--certificatesresolvers.myresolver.acme.dnschallenge=true"
+      - "--certificatesresolvers.myresolver.acme.dnschallenge.provider=cloudflare"
+      - "--certificatesresolvers.myresolver.acme.email=${ACME_EMAIL}"
+      - "--certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json"
+
+      - "--certificatesresolvers.myresolver.acme.httpchallenge=false"
+      - "--certificatesresolvers.myresolver.acme.tlschallenge=false"
+    environment:
+      - CF_DNS_API_TOKEN=${CF_DNS_API_TOKEN}
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.dashboard.rule=Host(`${TRAEFIK_DASHBOARD_HOSTNAME}`)"
+      - "traefik.http.routers.dashboard.entrypoints=websecure"
+      - "traefik.http.routers.dashboard.service=api@internal"
+      - "traefik.http.routers.dashboard.tls=true"
+      - "traefik.http.routers.dashboard.tls.certresolver=myresolver"
+      - "traefik.http.routers.dashboard.middlewares=authtraefik"
+      - "traefik.http.middlewares.authtraefik.basicauth.users=${TRAEFIK_DASHBOARD_USERNAME}:${TRAEFIK_DASHBOARD_PASSWORD}"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+      - "./letsencrypt:/letsencrypt"
+    networks:
+      - student-club-web-network
+
+  student-club-web-backend:
+    image: "student-club-web-backend:latest"
+    container_name: "student-club-web-backend"
+    environment:
+      - BACKEND_PORT=${BACKEND_PORT}
+      - JWT_SECRET=${JWT_SECRET}
+      - MONGODB_HOST=${MONGODB_HOST}
+      - MONGODB_PORT=${MONGODB_PORT}
+      - MONGODB_USERNAME=${MONGODB_USERNAME}
+      - MONGODB_PASSWORD=${MONGODB_PASSWORD}
+      - MONGODB_DATABASE=${MONGODB_DATABASE}
+    restart: always
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    tty: true
+    volumes:
+      - ./backend:/app
+    depends_on:
+      - traefik
+      - mongodb
+    networks:
+      - student-club-web-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:${BACKEND_PORT}/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  student-club-web-frontend:
+    image: "student-club-web-frontend:latest"
+    container_name: "student-club-web-frontend"
+    environment:
+      - SITE_HOSTNAME=${SITE_HOSTNAME}
+      - BACKEND_URL=${BACKEND_URL}
+      - PORT=${PORT}
+      - NEXT_PUBLIC_SITE_URL=${NEXT_PUBLIC_SITE_URL}
+      - NEXT_PUBLIC_MEDIUM_URL=${NEXT_PUBLIC_MEDIUM_URL}
+    restart: always
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        NEXT_PUBLIC_SITE_URL: ${NEXT_PUBLIC_SITE_URL}
+        NEXT_PUBLIC_MEDIUM_URL: ${NEXT_PUBLIC_MEDIUM_URL}
+    tty: true
+    volumes:
+      - ./frontend:/app
+      - ./frontend/public:/public
+    labels:
+      - "traefik.enable=true"
+
+      # HTTP Router
+      - "traefik.http.routers.student-club-web-frontend-http.rule=Host(`${SITE_HOSTNAME:-localhost}`)"
+      - "traefik.http.routers.student-club-web-frontend-http.entrypoints=web"
+      - "traefik.http.routers.student-club-web-frontend-http.middlewares=student-club-web-frontend-redirect-to-https"
+
+      # HTTPS Router
+      - "traefik.http.routers.student-club-web-frontend.rule=Host(`${SITE_HOSTNAME:-localhost}`)"
+      - "traefik.http.routers.student-club-web-frontend.entrypoints=websecure"
+      - "traefik.http.routers.student-club-web-frontend.service=student-club-web-frontend"
+      - "traefik.http.routers.student-club-web-frontend.tls=true"
+      - "traefik.http.routers.student-club-web-frontend.tls.certresolver=myresolver"
+
+      # Service
+      - "traefik.http.services.student-club-web-frontend.loadbalancer.server.port=${PORT}"
+      - "traefik.http.services.student-club-web-frontend.loadbalancer.passhostheader=true"
+
+      # Middleware: HTTPS redirection
+      - "traefik.http.middlewares.student-club-web-frontend-redirect-to-https.redirectscheme.scheme=https"
+      - "traefik.http.middlewares.student-club-web-frontend-redirect-to-https.redirectscheme.permanent=true"
+
+      # Middleware: Compression
+      - "traefik.http.routers.student-club-web-frontend.middlewares=student-club-web-frontend-compress"
+      - "traefik.http.middlewares.student-club-web-frontend-compress.compress=true"
+    depends_on:
+      - student-club-web-backend
+    networks:
+      - student-club-web-network
+
+  mongodb:
+    image: mongo:8.0
+    restart: unless-stopped
+    container_name: mongodb
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: "${MONGODB_USERNAME}"
+      MONGO_INITDB_ROOT_PASSWORD: "${MONGODB_PASSWORD}"
+    ports:
+      - "27017:${MONGODB_PORT}"
+    command: [ "mongod", "--bind_ip_all" ]
+    volumes:
+      - mongodb-data:/data/db
+    networks:
+      - student-club-web-network
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.runCommand({ ping: 1 })"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  mongodb-data:
+    driver: local
+
+networks:
+  student-club-web-network:
+    driver: bridge
+    ### if you want to use your docker network
+    #external: true
+    #name: your-docker-network-name
