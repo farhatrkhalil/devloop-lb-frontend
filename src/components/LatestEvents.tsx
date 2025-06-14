@@ -86,7 +86,7 @@ const LatestEvents: React.FC = () => {
   ];
 
   return (
-    <section className="latest-events">
+    <section id="events" className="latest-events">
       <div className="events-container" ref={containerRef}>
         <div className="events-header">
           <h2 className="events-title">Latest Events</h2>

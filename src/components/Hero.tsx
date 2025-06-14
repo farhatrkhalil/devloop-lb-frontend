@@ -71,14 +71,14 @@ const Hero: React.FC = () => {
           </span>
         </p>
         
-        <div className="hero-cta">
+        <a href="#events" className="hero-cta">
           <p className="cta-text">Check out the latest events</p>
           <div className="cta-arrow">
             <svg xmlns="http://www.w3.org/2000/svg" height="56px" viewBox="0 -960 960 960" width="56px" fill="#fff">
               <path d="M480-200 240-440l46.67-46.67 193.33 193 193.33-193L720-440 480-200Zm0-248.67-240-240 46.67-46.66 193.33 193 193.33-193L720-688.67l-240 240Z"></path>
             </svg>
           </div>
-        </div>
+        </a>
       </div>
     </section>
   );

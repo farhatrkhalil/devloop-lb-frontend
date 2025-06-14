@@ -73,10 +73,16 @@
   transition: all 0.3s ease;
   position: absolute;
   bottom: 8vh;
+  text-decoration: none;
+  color: inherit;
 }
 
 .hero-cta:hover {
   transform: translateY(-5px);
+}
+
+.hero-cta:hover .cta-text {
+  color: var(--text-white);
 }
 
 .cta-text {

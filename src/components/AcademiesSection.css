@@ -1,0 +1,212 @@
+.academies-section {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.academies-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://images.pexels.com/photos/6963061/pexels-photo-6963061.jpeg?auto=compress&cs=tinysrgb&w=1600');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.academies-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://images.pexels.com/photos/6963061/pexels-photo-6963061.jpeg?auto=compress&cs=tinysrgb&w=1600');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: scaleX(-1);
+  z-index: -1;
+}
+
+.academies-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
+  z-index: 1;
+}
+
+.academies-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.academies-content {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 70vh;
+}
+
+.academies-text-card {
+  max-width: 600px;
+  padding: 3rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.academies-text-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+}
+
+.academies-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text-white);
+  margin: 0 0 1.5rem 0;
+  line-height: 1.2;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.academies-subtitle {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  margin: 0 0 2.5rem 0;
+  font-weight: 400;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.academies-cta-button {
+  background-color: var(--primary-color);
+  color: var(--text-black);
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 209, 210, 0.3);
+}
+
+.academies-cta-button:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 209, 210, 0.4);
+}
+
+.academies-cta-button svg {
+  transition: transform 0.3s ease;
+}
+
+.academies-cta-button:hover svg {
+  transform: translate(2px, -2px);
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 968px) {
+  .academies-section {
+    min-height: 60vh;
+  }
+  
+  .academies-content {
+    min-height: 60vh;
+    justify-content: center;
+  }
+  
+  .academies-text-card {
+    max-width: 100%;
+    padding: 2.5rem;
+    margin: 0 1rem;
+  }
+  
+  .academies-title {
+    font-size: 2.5rem;
+  }
+  
+  .academies-subtitle {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .academies-container {
+    padding: 0 1rem;
+  }
+  
+  .academies-text-card {
+    padding: 2rem;
+    margin: 0;
+  }
+  
+  .academies-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .academies-subtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .academies-cta-button {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .academies-section {
+    min-height: 50vh;
+  }
+  
+  .academies-content {
+    min-height: 50vh;
+  }
+  
+  .academies-text-card {
+    padding: 1.5rem;
+    border-radius: 16px;
+  }
+  
+  .academies-title {
+    font-size: 1.75rem;
+  }
+  
+  .academies-subtitle {
+    font-size: 0.95rem;
+  }
+} 

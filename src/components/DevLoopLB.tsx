@@ -7,7 +7,7 @@ const DevLoopLB: React.FC = () => {
       <span className="bracket">&lt;</span>
       <span className="devloop-text">DevLoop</span>
       <span className="lb-text">LB</span>
-      <span className="bracket">&gt;</span>
+      <span className="bracket">/&gt;</span>
     </div>
   );
 };
