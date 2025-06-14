@@ -1,0 +1,154 @@
+.stats-section {
+  padding: 0rem 0 7rem 0;
+  background: #f8fafc;
+}
+
+.stats-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.stats-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.stats-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text-black);
+  margin: 0 0 1rem 0;
+  line-height: 1.2;
+}
+
+.stats-subtitle {
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, 0.7);
+  margin: 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.stat-card {
+  background: white;
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  border-top: 4px solid transparent;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  border-top: 4px solid var(--primary-color);
+}
+
+.stat-icon {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+}
+
+.stat-icon-media {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+.stat-number {
+  font-size: 4rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  line-height: 1;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.stat-label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.4;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .stats-section {
+    padding: 4rem 0;
+  }
+  
+  .stats-container {
+    padding: 0 1rem;
+  }
+  
+  .stats-title {
+    font-size: 2.5rem;
+  }
+  
+  .stats-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .stat-card {
+    padding: 2.5rem 1.5rem;
+  }
+  
+  .stat-number {
+    font-size: 3.5rem;
+  }
+  
+  .stat-label {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .stats-title {
+    font-size: 2rem;
+  }
+  
+  .stats-subtitle {
+    font-size: 1rem;
+  }
+  
+  .stat-card {
+    padding: 2rem 1rem;
+  }
+  
+  .stat-icon {
+    height: 70px;
+  }
+  
+  .stat-icon-media {
+    width: 56px;
+    height: 56px;
+  }
+  
+  .stat-number {
+    font-size: 3rem;
+  }
+} 
