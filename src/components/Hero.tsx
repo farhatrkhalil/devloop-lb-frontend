@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Navbar from './Navbar';
 import './Hero.css';
 
 const Hero: React.FC = () => {
@@ -54,6 +55,9 @@ const Hero: React.FC = () => {
       
       {/* Dark Overlay */}
       <div className="hero-overlay"></div>
+      
+      {/* Navbar overlay */}
+      <Navbar />
       
       {/* Content */}
       <div className="hero-content">

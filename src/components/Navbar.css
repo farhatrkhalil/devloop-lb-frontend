@@ -1,8 +1,8 @@
 .navbar {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
-  right: 0;
+  width: 100%;
   background: var(--background-dark);
   z-index: 1000;
   padding: 1rem 0;
