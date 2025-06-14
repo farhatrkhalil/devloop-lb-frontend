@@ -15,11 +15,9 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
     const { locale } = await params;
     setRequestLocale(locale);
 
-    const teamsRes = await fetch(`${process.env.BACKEND_URL}/teams`, { cache: 'force-cache' });
-    if (!teamsRes.ok) {
-        throw new Error('Failed to fetch team data');
-    }
-    const teams: Team[] = await teamsRes.json();
+    // Use mock data instead of backend API
+    const { MockApiService } = await import('@/lib/mock-data');
+    const teams: Team[] = await MockApiService.getTeams();
 
     const [metadataTranslations] = await Promise.all([
         getTranslations({ locale, namespace: `metadata.${pageName}` }),

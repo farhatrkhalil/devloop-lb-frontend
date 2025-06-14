@@ -7,8 +7,9 @@ import {Event} from "@/types/Event";
 export default async function LastEvents({locale, pageName}: {locale: string, pageName: string}) {
     const contentTranslations = await getTranslations({locale, namespace:`pages.${pageName}`})
 
-    const response = await fetch(`${process.env.BACKEND_URL}/events?limit=3`)
-    const lastEvents:Event[] = await response.json();
+    // Use mock data instead of backend API
+    const { MockApiService } = await import('@/lib/mock-data');
+    const lastEvents:Event[] = await MockApiService.getEvents(3);
 
     return (
         <IndexPageSectionLayout title={contentTranslations("lastEvents")} indexPageSectionId={"last-events"} isLastSection={true}>

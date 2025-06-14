@@ -1,0 +1,106 @@
+[
+  {
+    "_id": "link1234567890abcdef1234",
+    "title": {
+      "en": "University Portal",
+      "tr": "Üniversite Portalı"
+    },
+    "description": {
+      "en": "Access student services, grades, and course information",
+      "tr": "Öğrenci hizmetleri, notlar ve ders bilgilerine erişin"
+    },
+    "url": "https://portal.university.edu",
+    "icon": "🎓"
+  },
+  {
+    "_id": "link2345678901bcdef2345",
+    "title": {
+      "en": "GitHub Repository",
+      "tr": "GitHub Deposu"
+    },
+    "description": {
+      "en": "Our club's open source projects and code repositories",
+      "tr": "Kulübümüzün açık kaynak projeleri ve kod depoları"
+    },
+    "url": "https://github.com/computer-science-club",
+    "icon": "💻"
+  },
+  {
+    "_id": "link3456789012cdef3456",
+    "title": {
+      "en": "Discord Community",
+      "tr": "Discord Topluluğu"
+    },
+    "description": {
+      "en": "Join our Discord server for daily discussions and help",
+      "tr": "Günlük tartışmalar ve yardım için Discord sunucumuza katılın"
+    },
+    "url": "https://discord.gg/cs-club",
+    "icon": "💬"
+  },
+  {
+    "_id": "link4567890123def4567",
+    "title": {
+      "en": "LinkedIn Group",
+      "tr": "LinkedIn Grubu"
+    },
+    "description": {
+      "en": "Connect with alumni and professionals in our field",
+      "tr": "Alanımızdaki mezunlar ve profesyonellerle bağlantı kurun"
+    },
+    "url": "https://linkedin.com/groups/cs-club",
+    "icon": "🤝"
+  },
+  {
+    "_id": "link5678901234ef5678",
+    "title": {
+      "en": "Medium Blog",
+      "tr": "Medium Blog"
+    },
+    "description": {
+      "en": "Read our technical articles and project showcases",
+      "tr": "Teknik makalelerimizi ve proje vitrini yazılarımızı okuyun"
+    },
+    "url": "https://medium.com/@cs-club",
+    "icon": "📝"
+  },
+  {
+    "_id": "link6789012345f6789",
+    "title": {
+      "en": "YouTube Channel",
+      "tr": "YouTube Kanalı"
+    },
+    "description": {
+      "en": "Watch our workshop recordings and tech talks",
+      "tr": "Atölye kayıtlarımızı ve teknoloji konuşmalarımızı izleyin"
+    },
+    "url": "https://youtube.com/@cs-club",
+    "icon": "📺"
+  },
+  {
+    "_id": "link7890123456g7890",
+    "title": {
+      "en": "Event Calendar",
+      "tr": "Etkinlik Takvimi"
+    },
+    "description": {
+      "en": "Stay updated with upcoming events and deadlines",
+      "tr": "Yaklaşan etkinlikler ve son tarihlerden haberdar olun"
+    },
+    "url": "https://calendar.cs-club.university.edu",
+    "icon": "📅"
+  },
+  {
+    "_id": "link8901234567h8901",
+    "title": {
+      "en": "Study Resources",
+      "tr": "Çalışma Kaynakları"
+    },
+    "description": {
+      "en": "Access shared notes, textbooks, and learning materials",
+      "tr": "Paylaşılan notlar, ders kitapları ve öğrenme materyallerine erişin"
+    },
+    "url": "https://resources.cs-club.university.edu",
+    "icon": "📚"
+  }
+] 

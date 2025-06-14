@@ -1,0 +1,249 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 100vw;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -2;
+  filter: brightness(0.4) contrast(1.2);
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--overlay-dark);
+  z-index: -1;
+}
+
+.hero-content {
+  text-align: center;
+  color: var(--text-white);
+  max-width: 1000px;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+  line-height: 1.2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  line-height: 1.6;
+  position: relative;
+  height: 4.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: absolute;
+  bottom: 8vh;
+}
+
+.hero-cta:hover {
+  transform: translateY(-5px);
+}
+
+.cta-text {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0;
+  animation: bounce-text 2s ease-in-out infinite;
+}
+
+.cta-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: bounce 2s ease-in-out infinite 0.1s;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes bounce-text {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .hero-content {
+    transform: translateY(5vh);
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 4rem;
+  }
+
+  .hero-content {
+    padding: 0 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-content {
+    transform: translateY(3vh);
+  }
+
+  .hero-title {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .cta-text {
+    font-size: 1rem;
+  }
+
+  .cta-arrow {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.typewriter-text {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  line-height: 1.6;
+  color: transparent;
+  min-height: 1.6em;
+}
+
+.typewriter-text::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--text-white);
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typewriter-cycle 15s linear infinite;
+}
+
+.typewriter-text::after {
+  content: "|";
+  position: absolute;
+  color: var(--text-white);
+  animation: blink-cursor 1s step-end infinite;
+  left: 0;
+  animation: typewriter-cursor 15s linear infinite, blink-cursor 1s step-end infinite;
+}
+
+@keyframes typewriter-cycle {
+  0% { 
+    content: "Stay in the (dev) loop through our website which aggregates all the events and learning resources that devs living inside lebanon would be interested in.";
+    width: 0;
+  }
+  30% { 
+    content: "Stay in the (dev) loop through our website which aggregates all the events and learning resources that devs living inside lebanon would be interested in.";
+    width: 100%;
+  }
+  50% { 
+    content: "Stay in the (dev) loop through our website which aggregates all the events and learning resources that devs living inside lebanon would be interested in.";
+    width: 100%;
+  }
+  80% { 
+    content: "Stay in the (dev) loop through our website which aggregates all the events and learning resources that devs living inside lebanon would be interested in.";
+    width: 0;
+  }
+  100% { 
+    content: "Stay in the (dev) loop through our website which aggregates all the events and learning resources that devs living inside lebanon would be interested in.";
+    width: 0;
+  }
+}
+
+@keyframes typewriter-cursor {
+  0% { left: 0; }
+  30% { left: 100%; }
+  50% { left: 100%; }
+  80% { left: 0; }
+  100% { left: 0; }
+}
+
+@keyframes blink-cursor {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
+.typewriter-text-js {
+  display: inline-block;
+  max-width: 100%;
+  line-height: 1.6;
+  color: var(--text-white);
+  min-height: 3.2em;
+}
+
+.cursor {
+  color: var(--text-white);
+  font-weight: normal;
+}
+
+.cursor.visible {
+  opacity: 1;
+}
+
+.cursor.hidden {
+  opacity: 0;
+}

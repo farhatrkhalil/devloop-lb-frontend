@@ -1,5 +1,6 @@
 import {cookies} from "next/headers";
 import {User} from "@/types/User";
+import { MockApiService } from "@/lib/mock-data";
 
 export async function getUser() {
     try {
@@ -10,21 +11,9 @@ export async function getUser() {
             return null;
         }
 
-        const response = await fetch(`${process.env.BACKEND_URL}/auth`, {
-            method: 'GET',
-            headers: {
-                'Cookie': `token=${token}`
-            },
-            credentials: 'include',
-            cache: 'no-store'
-        });
-
-        if (!response.ok) {
-            return null;
-        }
-
-        const data = await response.json();
-        return data.user as User;
+        // Use mock authentication validation instead of backend API
+        const user = await MockApiService.validateToken(token);
+        return user;
     } catch (err) {
         console.error('Error fetching user:', err);
         return null;

@@ -22,10 +22,9 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
         getTranslations({locale, namespace:`pages.${pageName}`})
     ]);
 
-    const response = await fetch(`${process.env.BACKEND_URL}/events`, {
-        cache: 'force-cache'
-    });
-    const events:Event[] = await response.json();
+    // Use mock data instead of backend API
+    const { MockApiService } = await import('@/lib/mock-data');
+    const events:Event[] = await MockApiService.getEvents();
 
     return (
         <PageLayout title={metadataTranslations("title")} description={metadataTranslations("description")}>

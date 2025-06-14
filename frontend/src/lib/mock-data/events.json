@@ -1,0 +1,104 @@
+[
+  {
+    "_id": "event1234567890abcdef1234",
+    "type": {
+      "en": "Workshop",
+      "tr": "Atölye"
+    },
+    "title": {
+      "en": "Web Development Bootcamp",
+      "tr": "Web Geliştirme Bootcamp'i"
+    },
+    "description": {
+      "en": "Learn modern web development with React, Node.js, and MongoDB. This intensive 3-day workshop covers frontend and backend development.",
+      "tr": "React, Node.js ve MongoDB ile modern web geliştirmeyi öğrenin. Bu yoğun 3 günlük atölye frontend ve backend geliştirmeyi kapsar."
+    },
+    "date": "2024-03-15T09:00:00Z",
+    "url": "https://example.com/web-dev-bootcamp"
+  },
+  {
+    "_id": "event2345678901bcdef2345",
+    "type": {
+      "en": "Conference",
+      "tr": "Konferans"
+    },
+    "title": {
+      "en": "AI & Machine Learning Summit",
+      "tr": "AI ve Makine Öğrenmesi Zirvesi"
+    },
+    "description": {
+      "en": "Join industry experts discussing the future of AI, machine learning applications, and career opportunities in the field.",
+      "tr": "AI'nın geleceğini, makine öğrenmesi uygulamalarını ve alandaki kariyer fırsatlarını tartışan sektör uzmanlarına katılın."
+    },
+    "date": "2024-04-20T10:00:00Z",
+    "url": "https://example.com/ai-ml-summit"
+  },
+  {
+    "_id": "event3456789012cdef3456",
+    "type": {
+      "en": "Networking",
+      "tr": "Ağ Kurma"
+    },
+    "title": {
+      "en": "Tech Career Fair 2024",
+      "tr": "Teknoloji Kariyer Fuarı 2024"
+    },
+    "description": {
+      "en": "Meet with representatives from top tech companies, learn about internship opportunities, and network with professionals.",
+      "tr": "Top teknoloji şirketlerinin temsilcileriyle tanışın, staj fırsatları hakkında bilgi edinin ve profesyonellerle ağ kurun."
+    },
+    "date": "2024-03-25T13:00:00Z",
+    "url": "https://example.com/tech-career-fair"
+  },
+  {
+    "_id": "event4567890123def4567",
+    "type": {
+      "en": "Competition",
+      "tr": "Yarışma"
+    },
+    "title": {
+      "en": "Coding Challenge Championship",
+      "tr": "Kodlama Meydan Okuması Şampiyonası"
+    },
+    "description": {
+      "en": "Test your programming skills in our annual coding competition. Prizes for top performers and certificates for all participants.",
+      "tr": "Yıllık kodlama yarışmamızda programlama becerilerinizi test edin. En iyi performans gösterenler için ödüller ve tüm katılımcılar için sertifikalar."
+    },
+    "date": "2024-04-10T11:00:00Z",
+    "url": "https://example.com/coding-championship"
+  },
+  {
+    "_id": "event5678901234ef5678",
+    "type": {
+      "en": "Seminar",
+      "tr": "Seminer"
+    },
+    "title": {
+      "en": "Cybersecurity Fundamentals",
+      "tr": "Siber Güvenlik Temelleri"
+    },
+    "description": {
+      "en": "Learn essential cybersecurity concepts, best practices for data protection, and how to secure web applications.",
+      "tr": "Temel siber güvenlik kavramlarını, veri korunması için en iyi uygulamaları ve web uygulamalarını nasıl güvenceye alacağınızı öğrenin."
+    },
+    "date": "2024-03-30T14:30:00Z",
+    "url": "https://example.com/cybersecurity-seminar"
+  },
+  {
+    "_id": "event6789012345f6789",
+    "type": {
+      "en": "Workshop",
+      "tr": "Atölye"
+    },
+    "title": {
+      "en": "Mobile App Development with Flutter",
+      "tr": "Flutter ile Mobil Uygulama Geliştirme"
+    },
+    "description": {
+      "en": "Build cross-platform mobile applications using Flutter. Perfect for beginners wanting to enter mobile development.",
+      "tr": "Flutter kullanarak çapraz platform mobil uygulamalar geliştirin. Mobil geliştirmeye girmek isteyen yeni başlayanlar için mükemmel."
+    },
+    "date": "2024-04-05T10:00:00Z",
+    "url": "https://example.com/flutter-workshop"
+  }
+] 

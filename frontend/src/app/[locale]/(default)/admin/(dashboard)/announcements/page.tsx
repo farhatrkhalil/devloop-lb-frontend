@@ -10,9 +10,9 @@ export default async function AdminAnnouncementsList({params}: { params: Promise
 
     const contentTranslations = await getTranslations({locale, namespace:`pages.${pageName}`})
 
-    const response = await fetch(`${process.env.BACKEND_URL}/announcements`);
-
-    const announcements: Announcement[] = await response.json();
+    // Use mock data instead of backend API
+    const { MockApiService } = await import('@/lib/mock-data');
+    const announcements: Announcement[] = await MockApiService.getAnnouncements();
 
     return (
         <div className="justify-items-center display-block">

@@ -1,0 +1,82 @@
+[
+  {
+    "_id": "67890abcdef1234567890abc",
+    "type": {
+      "en": "Academic",
+      "tr": "Akademik"
+    },
+    "title": {
+      "en": "Scholarship Application Deadline",
+      "tr": "Burs Başvuru Tarihi"
+    },
+    "description": {
+      "en": "Applications for the 2024 scholarship program are due by March 15th. Please submit all required documents through the student portal.",
+      "tr": "2024 burs programı başvuruları 15 Mart'a kadar teslim edilmelidir. Lütfen tüm gerekli belgeleri öğrenci portalından gönderin."
+    },
+    "date": "2024-02-15T10:00:00Z"
+  },
+  {
+    "_id": "12345abcdef1234567890def",
+    "type": {
+      "en": "Event",
+      "tr": "Etkinlik"
+    },
+    "title": {
+      "en": "Tech Talk: AI in Computer Science",
+      "tr": "Teknoloji Konuşması: Bilgisayar Biliminde AI"
+    },
+    "description": {
+      "en": "Join us for an exciting tech talk about the latest developments in AI and machine learning. Guest speaker: Dr. Sarah Johnson from MIT.",
+      "tr": "AI ve makine öğrenmesindeki son gelişmeler hakkında heyecan verici bir teknoloji konuşmasına katılın. Konuk konuşmacı: MIT'den Dr. Sarah Johnson."
+    },
+    "date": "2024-03-01T14:00:00Z"
+  },
+  {
+    "_id": "abcdef1234567890123456ab",
+    "type": {
+      "en": "General",
+      "tr": "Genel"
+    },
+    "title": {
+      "en": "Club Meeting - March 2024",
+      "tr": "Kulüp Toplantısı - Mart 2024"
+    },
+    "description": {
+      "en": "Monthly club meeting to discuss upcoming projects and events. All members are welcome to attend.",
+      "tr": "Yaklaşan projeler ve etkinlikleri tartışmak için aylık kulüp toplantısı. Tüm üyeler katılabilir."
+    },
+    "date": "2024-03-10T16:00:00Z"
+  },
+  {
+    "_id": "fedcba0987654321fedcba09",
+    "type": {
+      "en": "Workshop",
+      "tr": "Atölye"
+    },
+    "title": {
+      "en": "Python Programming Workshop",
+      "tr": "Python Programlama Atölyesi"
+    },
+    "description": {
+      "en": "Learn the fundamentals of Python programming in this hands-on workshop. Suitable for beginners and intermediate learners.",
+      "tr": "Bu uygulamalı atölyede Python programlamanın temellerini öğrenin. Yeni başlayanlar ve orta seviye öğrenciler için uygundur."
+    },
+    "date": "2024-02-28T13:00:00Z"
+  },
+  {
+    "_id": "987654321abcdef987654321",
+    "type": {
+      "en": "Competition",
+      "tr": "Yarışma"
+    },
+    "title": {
+      "en": "Hackathon 2024 Registration Open",
+      "tr": "Hackathon 2024 Kayıtları Açık"
+    },
+    "description": {
+      "en": "Register now for our annual hackathon! Teams of 3-5 members can compete for prizes worth $5000. Registration deadline: March 20th.",
+      "tr": "Yıllık hackathon'umuz için şimdi kaydolun! 3-5 kişilik takımlar 5000 $ değerinde ödüller için yarışabilir. Kayıt tarihi: 20 Mart."
+    },
+    "date": "2024-02-20T09:00:00Z"
+  }
+] 

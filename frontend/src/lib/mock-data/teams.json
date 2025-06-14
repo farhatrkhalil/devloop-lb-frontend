@@ -1,0 +1,144 @@
+[
+  {
+    "_id": "team2024spring",
+    "period": "2024 Spring",
+    "management": [
+      {
+        "_id": "member001",
+        "name": "Alice Johnson",
+        "position": {
+          "en": "President",
+          "tr": "Başkan"
+        },
+        "description": {
+          "en": "Computer Science senior with expertise in full-stack development and team leadership.",
+          "tr": "Full-stack geliştirme ve takım liderliği konularında uzman Bilgisayar Bilimleri son sınıf öğrencisi."
+        },
+        "email": "alice.johnson@university.edu",
+        "linkedin": "https://linkedin.com/in/alice-johnson"
+      },
+      {
+        "_id": "member002",
+        "name": "Michael Chen",
+        "position": {
+          "en": "Vice President",
+          "tr": "Başkan Yardımcısı"
+        },
+        "description": {
+          "en": "Software engineering student passionate about machine learning and AI applications.",
+          "tr": "Makine öğrenmesi ve AI uygulamaları konusunda tutkulu yazılım mühendisliği öğrencisi."
+        },
+        "email": "michael.chen@university.edu",
+        "linkedin": "https://linkedin.com/in/michael-chen"
+      },
+      {
+        "_id": "member003",
+        "name": "Sarah Williams",
+        "position": {
+          "en": "Secretary",
+          "tr": "Sekreter"
+        },
+        "description": {
+          "en": "Information Systems student with strong organizational skills and event planning experience.",
+          "tr": "Güçlü organizasyon becerileri ve etkinlik planlama deneyimi olan Bilgi Sistemleri öğrencisi."
+        },
+        "email": "sarah.williams@university.edu",
+        "linkedin": "https://linkedin.com/in/sarah-williams"
+      },
+      {
+        "_id": "member004",
+        "name": "David Rodriguez",
+        "position": {
+          "en": "Treasurer",
+          "tr": "Sayman"
+        },
+        "description": {
+          "en": "Computer Science junior with experience in financial management and budgeting.",
+          "tr": "Mali yönetim ve bütçe planlama deneyimi olan Bilgisayar Bilimleri 3. sınıf öğrencisi."
+        },
+        "email": "david.rodriguez@university.edu",
+        "linkedin": "https://linkedin.com/in/david-rodriguez"
+      }
+    ],
+    "auditing": [
+      {
+        "_id": "auditor001",
+        "name": "Emma Thompson",
+        "position": {
+          "en": "Head Auditor",
+          "tr": "Baş Denetçi"
+        },
+        "description": {
+          "en": "Graduate student specializing in software quality assurance and project management.",
+          "tr": "Yazılım kalite güvencesi ve proje yönetimi alanında uzmanlaşan yüksek lisans öğrencisi."
+        },
+        "email": "emma.thompson@university.edu",
+        "linkedin": "https://linkedin.com/in/emma-thompson"
+      },
+      {
+        "_id": "auditor002",
+        "name": "James Kim",
+        "position": {
+          "en": "Auditor",
+          "tr": "Denetçi"
+        },
+        "description": {
+          "en": "Computer Science senior with strong analytical skills and attention to detail.",
+          "tr": "Güçlü analitik becerileri ve detaylara dikkat eden Bilgisayar Bilimleri son sınıf öğrencisi."
+        },
+        "email": "james.kim@university.edu",
+        "linkedin": "https://linkedin.com/in/james-kim"
+      }
+    ]
+  },
+  {
+    "_id": "team2023fall",
+    "period": "2023 Fall",
+    "management": [
+      {
+        "_id": "member005",
+        "name": "Lisa Zhang",
+        "position": {
+          "en": "President",
+          "tr": "Başkan"
+        },
+        "description": {
+          "en": "Former president with extensive experience in club operations and community building.",
+          "tr": "Kulüp operasyonları ve topluluk oluşturma konularında geniş deneyime sahip eski başkan."
+        },
+        "email": "lisa.zhang@university.edu",
+        "linkedin": "https://linkedin.com/in/lisa-zhang"
+      },
+      {
+        "_id": "member006",
+        "name": "Robert Miller",
+        "position": {
+          "en": "Vice President",
+          "tr": "Başkan Yardımcısı"
+        },
+        "description": {
+          "en": "Software development enthusiast with focus on mobile applications and user experience.",
+          "tr": "Mobil uygulamalar ve kullanıcı deneyimi odaklı yazılım geliştirme meraklısı."
+        },
+        "email": "robert.miller@university.edu",
+        "linkedin": "https://linkedin.com/in/robert-miller"
+      }
+    ],
+    "auditing": [
+      {
+        "_id": "auditor003",
+        "name": "Sophia Lee",
+        "position": {
+          "en": "Head Auditor",
+          "tr": "Baş Denetçi"
+        },
+        "description": {
+          "en": "Former head auditor known for implementing efficient review processes.",
+          "tr": "Verimli inceleme süreçleri uygulamasıyla tanınan eski baş denetçi."
+        },
+        "email": "sophia.lee@university.edu",
+        "linkedin": "https://linkedin.com/in/sophia-lee"
+      }
+    ]
+  }
+] 

@@ -22,8 +22,9 @@ export default async function Page({params}: { params: Promise<{ locale: string 
         getTranslations({locale, namespace: `pages.${pageName}`})
     ]);
 
-    const response = await fetch(`${process.env.BACKEND_URL}/links`)
-    const links: LinkType[] = await response.json();
+    // Use mock data instead of backend API
+    const { MockApiService } = await import('@/lib/mock-data');
+    const links: LinkType[] = await MockApiService.getLinks();
 
     return (
         <main className="text-center px-4 py-8 bg-gradient-to-b from-[#272727] to-black text-white flex flex-col items-center justify-center min-h-screen">

@@ -2,20 +2,17 @@
 
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
+import { MockApiService } from "@/lib/mock-data";
 
 export async function handleLogin(formData: FormData) {
     const username = formData.get("username") as string;
     const password = formData.get("password") as string;
 
-    const response = await fetch(`${process.env.BACKEND_URL}/auth`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ username, password }),
-    });
+    // Use mock authentication instead of backend API
+    const authResult = await MockApiService.authenticateUser(username, password);
 
-    if (response.ok) {
-        const data = await response.json();
-        const token = data.token;
+    if (authResult) {
+        const token = authResult.token;
 
         (await cookies()).set("token", token, {
             httpOnly: true,

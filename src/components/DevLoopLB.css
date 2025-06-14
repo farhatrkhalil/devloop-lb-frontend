@@ -1,0 +1,19 @@
+.devloop-logo {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    user-select: none;
+  }
+  
+  .bracket {
+    color: var(--text-white);
+  }
+  
+  .devloop-text {
+    color: var(--text-white);
+  }
+  
+  .lb-text {
+    color: var(--primary-color);
+  }
