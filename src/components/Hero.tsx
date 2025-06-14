@@ -3,7 +3,7 @@ import Navbar from './Navbar';
 import './Hero.css';
 
 const Hero: React.FC = () => {
-  const fullText = "Stay in the (dev) loop through our website which aggregates all the events and learning resources that devs living inside lebanon would be interested in.";
+  const fullText = "Stay in the (dev) loop with DevLoopLB, your go-to hub for all the latest events, workshops, and learning resources made for developers in Lebanon.";
   const [displayText, setDisplayText] = useState("");
   const [isTyping, setIsTyping] = useState(true);
   const [showCursor, setShowCursor] = useState(true);
