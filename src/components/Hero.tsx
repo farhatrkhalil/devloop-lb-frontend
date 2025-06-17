@@ -61,7 +61,9 @@ const Hero: React.FC = () => {
       <Navbar />
 
       <div className="hero-content">
-        <h1 className="hero-title">Welcome to DevLoopLB</h1>
+        <h1 className="hero-title">
+          Welcome to DevLoop<span className="highlight-lb">LB</span>
+        </h1>
         <p className="hero-subtitle">
           <span className="typewriter-text-js">
             {displayText}
