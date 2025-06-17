@@ -162,7 +162,7 @@ const LatestEvents: React.FC = () => {
               listed on this page. All event details are shared for
               informational purposes only, and we do not guarantee their
               accuracy, availability, or any outcomes related to attendance or
-              participation.
+              participation
             </p>
           </div>
         </div>
