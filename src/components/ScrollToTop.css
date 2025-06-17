@@ -37,11 +37,11 @@
 }
 
 .scroll-to-top svg {
-  transition: transform 0.3s ease;
+  transition: transform 0.6s ease;
 }
 
 .scroll-to-top:hover svg {
-  transform: translateY(-2px);
+  transform: translateY(-4px);
 }
 
 /* Mobile responsive */

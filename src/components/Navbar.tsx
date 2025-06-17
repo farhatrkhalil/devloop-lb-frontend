@@ -15,7 +15,10 @@ const Navbar: React.FC = () => {
         {/* Logo */}
         <div
           className="navbar-logo"
-          onClick={() => window.location.reload()}
+          onClick={() => {
+            window.scrollTo({ top: 0, behavior: "auto" });
+            window.location.reload();
+          }}
           style={{ cursor: "pointer" }}
         >
           <DevLoopLB />
