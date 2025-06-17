@@ -83,10 +83,15 @@
 
 .hero-cta:hover {
   transform: translateY(-5px);
+  color: rgb(0, 209, 210);
 }
 
 .hero-cta:hover .cta-text {
-  color: var(--text-white);
+  color: rgb(0, 209, 210);
+}
+
+.hero-cta:hover .cta-arrow svg path {
+  fill: rgb(0, 209, 210);
 }
 
 .cta-text {

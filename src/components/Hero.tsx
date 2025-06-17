@@ -74,7 +74,7 @@ const Hero: React.FC = () => {
         </p>
 
         <a href="#events" className="hero-cta">
-          <p className="cta-text">Check out the latest events</p>
+          <p className="cta-text">Explore & Discover</p>
           <div className="cta-arrow">
             <svg
               xmlns="http://www.w3.org/2000/svg"
