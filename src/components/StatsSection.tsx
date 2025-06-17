@@ -149,25 +149,28 @@ const StatsSection: React.FC = () => {
     <section ref={sectionRef} className="stats-section">
       <div className="stats-container">
         <div className="stats-header">
-          <h2 className="stats-title">DevLoopLB by the Numbers</h2>
+          <h2 className="stats-title">
+            DevLoop<span style={{ color: "rgb(0, 209, 210)" }}>LB</span> by the
+            Numbers
+          </h2>
           <p className="stats-subtitle">
-            Connecting Lebanon's developer ecosystem through events, education, and community
+            Connecting Lebanon's developer ecosystem through events, education,
+            and community
           </p>
         </div>
-        
+
         <div className="stats-grid">
           {stats.map((stat) => (
-            <div 
-              key={stat.id} 
+            <div
+              key={stat.id}
               className="stat-card"
               onMouseEnter={() => handleCardHover(stat.id)}
               onMouseLeave={() => handleCardLeave(stat.id)}
             >
-              <div className="stat-icon">
-                {renderIcon(stat)}
-              </div>
+              <div className="stat-icon">{renderIcon(stat)}</div>
               <div className="stat-number">
-                {animatedNumbers[stat.id] || 0}{stat.suffix}
+                {animatedNumbers[stat.id] || 0}
+                {stat.suffix}
               </div>
               <div className="stat-label">{stat.label}</div>
             </div>
