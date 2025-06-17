@@ -92,21 +92,33 @@ const LatestEvents: React.FC = () => {
           <h2 className="events-title">Latest Events</h2>
           <button className="see-all-button">
             See all events
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7 17L17 7M17 7H7M17 7V17"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
             </svg>
           </button>
         </div>
-        
+
         <div className="events-grid">
           {mockEvents.map((event) => (
             <div key={event.id} className="event-card">
-              <img 
-                src={event.image} 
+              <img
+                src={event.image}
                 alt={event.title}
                 className="event-image"
               />
-              
+
               <div className="event-content">
                 <div className="event-tags">
                   {event.tags.map((tag, index) => (
@@ -115,15 +127,11 @@ const LatestEvents: React.FC = () => {
                     </span>
                   ))}
                 </div>
-                
-                <h3 className="event-title">
-                  {event.title}
-                </h3>
-                
-                <p className="event-description">
-                  {event.description}
-                </p>
-                
+
+                <h3 className="event-title">{event.title}</h3>
+
+                <p className="event-description">{event.description}</p>
+
                 <div className="event-footer">
                   <a href="#" className="read-more-link">
                     Read More
@@ -133,17 +141,28 @@ const LatestEvents: React.FC = () => {
             </div>
           ))}
         </div>
-        
+
         {/* Disclaimer */}
         <div className="events-disclaimer">
           <div className="disclaimer-content">
             <div className="disclaimer-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="16px" fill="#000">
-                <path d="M440-280h80v-240h-80v240Zm40-320q17 0 28.5-11.5T520-640q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640q0 17 11.5 28.5T480-600Zm0 520q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="16px"
+                viewBox="0 -960 960 960"
+                width="16px"
+                fill="#000"
+              >
+                <path d="M440-280h80v-240h-80v240Zm40-320q17 0 28.5-11.5T520-640q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640q0 17 11.5 28.5T480-600Zm0 520q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" />
               </svg>
             </div>
             <p className="disclaimer-text">
-              Please note that none of these events are hosted or organized by DevLoopLB. We are simply an aggregator of interesting events in Lebanon.
+              DevLoopLB is not affiliated with, responsible for, or involved in
+              the planning, organization, or execution of any of the events
+              listed on this page. All event details are shared for
+              informational purposes only, and we do not guarantee their
+              accuracy, availability, or any outcomes related to attendance or
+              participation.
             </p>
           </div>
         </div>

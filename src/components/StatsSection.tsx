@@ -20,7 +20,7 @@ const StatsSection: React.FC = () => {
   const stats: Stat[] = [
     {
       id: 1,
-      number: 25,
+      number: 22,
       suffix: '+',
       label: 'Events since 2025',
       icon: 'https://cdn-icons-mp4.flaticon.com/512/19000/19000777.mp4',
@@ -28,16 +28,16 @@ const StatsSection: React.FC = () => {
     },
     {
       id: 2,
-      number: 10,
-      suffix: '',
+      number: 8,
+      suffix: '+',
       label: 'Bootcamps & Academies',
       icon: 'https://cdn-icons-mp4.flaticon.com/512/6454/6454149.mp4',
       iconType: 'mp4'
     },
     {
       id: 3,
-      number: 13,
-      suffix: '',
+      number: 11,
+      suffix: '+',
       label: 'Lebanese Dev Communities',
       icon: 'https://cdn-icons-mp4.flaticon.com/512/6172/6172532.mp4',
       iconType: 'mp4'
