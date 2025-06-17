@@ -35,6 +35,7 @@
 }
 
 .navbar-link {
+  position: relative;
   color: var(--text-white);
   text-decoration: none;
   font-weight: 500;
@@ -43,14 +44,25 @@
   padding: 0.5rem 0;
 }
 
+.navbar-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
 .navbar-link:hover,
 .navbar-link.active {
   color: var(--primary-color);
 }
 
-.navbar-right {
-  display: flex;
-  align-items: center;
+.navbar-link:hover::after,
+.navbar-link.active::after {
+  width: 100%;
 }
 
 .submit-event-button {
