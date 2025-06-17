@@ -198,3 +198,15 @@
     font-size: 1.3rem;
   }
 }
+
+.scroll-progress-bar {
+  position: fixed;
+  top: 100%;
+  left: 0;
+  height: 7px;
+  background: rgb(0, 209, 210);
+  border-bottom: 2px solid rgba(0, 0, 0, 1);
+  width: 0%;
+  z-index: 9998;
+  transition: width 0.1s ease-out;
+}

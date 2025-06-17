@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import DevLoopLB from './DevLoopLB';
-import './Navbar.css';
+import React, { useState, useEffect } from "react";
+import DevLoopLB from "./DevLoopLB";
+import "./Navbar.css";
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -8,6 +8,24 @@ const Navbar: React.FC = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  useEffect(() => {
+    const updateScrollBar = () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.body.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / docHeight) * 100;
+
+      const progressBar = document.querySelector(
+        ".scroll-progress-bar"
+      ) as HTMLElement;
+      if (progressBar) {
+        progressBar.style.width = `${scrollPercent}%`;
+      }
+    };
+
+    window.addEventListener("scroll", updateScrollBar);
+    return () => window.removeEventListener("scroll", updateScrollBar);
+  }, []);
 
   return (
     <nav className="navbar">
@@ -65,6 +83,7 @@ const Navbar: React.FC = () => {
           <span className={`bar ${isMenuOpen ? "active" : ""}`}></span>
         </div>
       </div>
+      <div className="scroll-progress-bar"></div>
     </nav>
   );
 };
