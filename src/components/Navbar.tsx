@@ -13,41 +13,53 @@ const Navbar: React.FC = () => {
     <nav className="navbar">
       <div className="navbar-container">
         {/* Logo */}
-        <div className="navbar-logo">
+        <div
+          className="navbar-logo"
+          onClick={() => window.location.reload()}
+          style={{ cursor: "pointer" }}
+        >
           <DevLoopLB />
         </div>
 
         {/* Desktop Navigation */}
-        <ul className={`navbar-menu ${isMenuOpen ? 'active' : ''}`}>
+        <ul className={`navbar-menu ${isMenuOpen ? "active" : ""}`}>
           <li className="navbar-item">
-            <a href="#" className="navbar-link active">Home</a>
+            <a href="#" className="navbar-link active">
+              Home
+            </a>
           </li>
           <li className="navbar-item">
-            <a href="#" className="navbar-link">Events</a>
+            <a href="#" className="navbar-link">
+              Events
+            </a>
           </li>
           <li className="navbar-item">
-            <a href="#" className="navbar-link">Academies</a>
+            <a href="#" className="navbar-link">
+              Academies
+            </a>
           </li>
           <li className="navbar-item">
-            <a href="#" className="navbar-link">About Us</a>
+            <a href="#" className="navbar-link">
+              About Us
+            </a>
           </li>
           <li className="navbar-item">
-            <a href="#" className="navbar-link">Contact Us</a>
+            <a href="#" className="navbar-link">
+              Contact Us
+            </a>
           </li>
         </ul>
 
         {/* Right side button */}
         <div className="navbar-right">
-          <button className="submit-event-button">
-            Submit an Event
-          </button>
+          <button className="submit-event-button">Submit an Event</button>
         </div>
 
         {/* Mobile menu button */}
         <div className="mobile-menu" onClick={toggleMenu}>
-          <span className={`bar ${isMenuOpen ? 'active' : ''}`}></span>
-          <span className={`bar ${isMenuOpen ? 'active' : ''}`}></span>
-          <span className={`bar ${isMenuOpen ? 'active' : ''}`}></span>
+          <span className={`bar ${isMenuOpen ? "active" : ""}`}></span>
+          <span className={`bar ${isMenuOpen ? "active" : ""}`}></span>
+          <span className={`bar ${isMenuOpen ? "active" : ""}`}></span>
         </div>
       </div>
     </nav>
