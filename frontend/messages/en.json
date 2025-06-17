@@ -1,7 +1,5 @@
 {
   "general": {
-    "universityName": "Istanbul University",
-    "studentClubName": "Computer Science Club",
     "learnMore": "Learn More",
     "readMore": "Read More",
     "allRightsReserved": "all rights reserved.",
@@ -13,16 +11,16 @@
     "indexHero": "gradient"
   },
 
-  "metadata": {
-    "index": {
-      "siteName": "Istanbul University Computer Science Club Web Site",
-      "title": "Istanbul University Computer Science Club",
-      "description": "Welcome to the Computer Science Club of Istanbul University! We bring together students passionate about computer science, and tech to foster collaboration.",
-      "keywords": "Istanbul University, Computer Science Club, Computer Science Students, Technology Club, Programming, Coding, Software Development, AI, Machine Learning, Cybersecurity, Web Development, Hackathons, Workshops, Tech Events, University Clubs, Innovation, Student Community",
-      "author": "Istanbul University Computer Science Club",
-      "contact": "contact@enesbuyuk.com",
-      "titleSuffix": " | Istanbul University Computer Science Club"
-    },
+"metadata": {
+  "index": {
+    "siteName": "DevLoopLB",
+    "title": "DevLoopLB",
+    "description": "Welcome to DevLoopLB! Stay in the dev loop with Lebanon’s go-to hub for tech events, workshops, and learning resources tailored for developers.",
+    "keywords": "DevLoopLB, Lebanon Developers, Tech Events Lebanon, Developer Workshops, Coding Events, Programming Lebanon, Software Development, Tech Meetups, Web Development, Hackathons, Tech Community, Learning Resources, Developer Network Lebanon",
+    "author": "DevLoopLB",
+    "contact": "contact@devlooplb.com",
+    "titleSuffix": " | DevLoopLB"
+  },
     "announcements": {
       "title": "Announcements",
       "description": "Stay updated with the latest news and updates from the Istanbul University Computer Science Club!",

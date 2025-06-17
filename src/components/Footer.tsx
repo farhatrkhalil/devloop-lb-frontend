@@ -12,29 +12,42 @@ const Footer: React.FC = () => {
           <div className="footer-logo">
             <DevLoopLB />
           </div>
-          
+
           <nav className="footer-nav">
             <ul className="footer-menu">
               <li className="footer-item">
-                <a href="#" className="footer-link active">Home</a>
+                <a href="#" className="footer-link active">
+                  Home
+                </a>
               </li>
               <li className="footer-item">
-                <a href="#events" className="footer-link">Events</a>
+                <a href="#events" className="footer-link">
+                  Events
+                </a>
               </li>
               <li className="footer-item">
-                <a href="#" className="footer-link">Academies</a>
+                <a href="#" className="footer-link">
+                  Academies
+                </a>
               </li>
               <li className="footer-item">
-                <a href="#" className="footer-link">About Us</a>
+                <a href="#" className="footer-link">
+                  About Us
+                </a>
               </li>
               <li className="footer-item">
-                <a href="#" className="footer-link">Contact Us</a>
+                <a href="#" className="footer-link">
+                  Contact Us
+                </a>
               </li>
             </ul>
           </nav>
-          
+
           <div className="footer-copyright">
-            <p>&copy; {currentYear} DevLoopLB. All rights reserved.</p>
+            <p>
+              &copy; {currentYear} <strong>DevLoopLB</strong>. All rights
+              reserved.
+            </p>
           </div>
         </div>
       </div>
