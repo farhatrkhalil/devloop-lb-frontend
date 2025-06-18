@@ -150,8 +150,8 @@ const StatsSection: React.FC = () => {
       <div className="stats-container">
         <div className="stats-header">
           <h2 className="stats-title">
-            DevLoop<span style={{ color: "rgb(0, 209, 210)" }}>LB</span> by the
-            Numbers
+            DevLoop<span style={{ color: "rgb(0, 209, 210)" }}>LB</span> in
+            Numbers 📊
           </h2>
           <p className="stats-subtitle">
             Connecting Lebanon's developer ecosystem through events, education,
