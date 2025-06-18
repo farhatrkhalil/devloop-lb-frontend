@@ -1,44 +1,93 @@
-import React from 'react';
-import DevLoopLB from './DevLoopLB';
-import './Footer.css';
+import React from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import DevLoopLB from "./DevLoopLB";
+import "./Footer.css";
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleLogoClick = () => {
+    // If we're already on the home page, scroll to top and reload
+    if (location.pathname === "/") {
+      window.scrollTo(0, 0);
+      window.location.reload();
+    } else {
+      // If we're on a different page, navigate to home and then reload
+      navigate("/");
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        window.location.reload();
+      }, 100);
+    }
+  };
+
+  const isActive = (path: string) => {
+    return location.pathname === path;
+  };
 
   return (
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-content">
-          <div className="footer-logo">
+          <div
+            className="footer-logo"
+            onClick={handleLogoClick}
+            style={{ cursor: "pointer" }}
+          >
             <DevLoopLB />
           </div>
 
           <nav className="footer-nav">
             <ul className="footer-menu">
               <li className="footer-item">
-                <a href="#" className="footer-link active">
+                <Link
+                  to="/"
+                  className={`footer-link ${isActive("/") ? "active" : ""}`}
+                >
                   Home
-                </a>
+                </Link>
               </li>
               <li className="footer-item">
-                <a href="#events" className="footer-link">
+                <Link
+                  to="/events"
+                  className={`footer-link ${
+                    isActive("/events") ? "active" : ""
+                  }`}
+                >
                   Events
-                </a>
+                </Link>
               </li>
               <li className="footer-item">
-                <a href="#" className="footer-link">
+                <Link
+                  to="/academies"
+                  className={`footer-link ${
+                    isActive("/academies") ? "active" : ""
+                  }`}
+                >
                   Academies
-                </a>
+                </Link>
               </li>
               <li className="footer-item">
-                <a href="#" className="footer-link">
+                <Link
+                  to="/about"
+                  className={`footer-link ${
+                    isActive("/about") ? "active" : ""
+                  }`}
+                >
                   About Us
-                </a>
+                </Link>
               </li>
               <li className="footer-item">
-                <a href="#" className="footer-link">
+                <Link
+                  to="/contact"
+                  className={`footer-link ${
+                    isActive("/contact") ? "active" : ""
+                  }`}
+                >
                   Contact Us
-                </a>
+                </Link>
               </li>
             </ul>
           </nav>
@@ -55,4 +104,4 @@ const Footer: React.FC = () => {
   );
 };
 
-export default Footer; 
+export default Footer;

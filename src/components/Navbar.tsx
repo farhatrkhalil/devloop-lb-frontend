@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import DevLoopLB from "./DevLoopLB";
 import "./Navbar.css";
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -27,16 +30,32 @@ const Navbar: React.FC = () => {
     return () => window.removeEventListener("scroll", updateScrollBar);
   }, []);
 
+  const isActive = (path: string) => {
+    return location.pathname === path;
+  };
+
+  const handleLogoClick = () => {
+    // If we're already on the home page, scroll to top and reload
+    if (location.pathname === "/") {
+      window.scrollTo(0, 0);
+      window.location.reload();
+    } else {
+      // If we're on a different page, navigate to home and then reload
+      navigate("/");
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        window.location.reload();
+      }, 100);
+    }
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-container">
         {/* Logo */}
         <div
           className="navbar-logo"
-          onClick={() => {
-            window.scrollTo({ top: 0, behavior: "auto" });
-            window.location.reload();
-          }}
+          onClick={handleLogoClick}
           style={{ cursor: "pointer" }}
         >
           <DevLoopLB />
@@ -45,35 +64,54 @@ const Navbar: React.FC = () => {
         {/* Desktop Navigation */}
         <ul className={`navbar-menu ${isMenuOpen ? "active" : ""}`}>
           <li className="navbar-item">
-            <a href="#" className="navbar-link active">
+            <Link
+              to="/"
+              className={`navbar-link ${isActive("/") ? "active" : ""}`}
+            >
               Home
-            </a>
+            </Link>
           </li>
           <li className="navbar-item">
-            <a href="#" className="navbar-link">
+            <Link
+              to="/events"
+              className={`navbar-link ${isActive("/events") ? "active" : ""}`}
+            >
               Events
-            </a>
+            </Link>
           </li>
           <li className="navbar-item">
-            <a href="#" className="navbar-link">
+            <Link
+              to="/academies"
+              className={`navbar-link ${
+                isActive("/academies") ? "active" : ""
+              }`}
+            >
               Academies
-            </a>
+            </Link>
           </li>
           <li className="navbar-item">
-            <a href="#" className="navbar-link">
+            <Link
+              to="/about"
+              className={`navbar-link ${isActive("/about") ? "active" : ""}`}
+            >
               About Us
-            </a>
+            </Link>
           </li>
           <li className="navbar-item">
-            <a href="#" className="navbar-link">
+            <Link
+              to="/contact"
+              className={`navbar-link ${isActive("/contact") ? "active" : ""}`}
+            >
               Contact Us
-            </a>
+            </Link>
           </li>
         </ul>
 
         {/* Right side button */}
         <div className="navbar-right">
-          <button className="submit-event-button">Submit an Event</button>
+          <Link to="/submit-event" className="submit-event-button">
+            Submit an Event
+          </Link>
         </div>
 
         {/* Mobile menu button */}
