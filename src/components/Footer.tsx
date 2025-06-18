@@ -8,6 +8,11 @@ const Footer: React.FC = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
+  // Function to scroll to top
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+
   const handleLogoClick = () => {
     // If we're already on the home page, scroll to top and reload
     if (location.pathname === "/") {
@@ -45,6 +50,7 @@ const Footer: React.FC = () => {
                 <Link
                   to="/"
                   className={`footer-link ${isActive("/") ? "active" : ""}`}
+                  onClick={scrollToTop}
                 >
                   Home
                 </Link>
@@ -55,6 +61,7 @@ const Footer: React.FC = () => {
                   className={`footer-link ${
                     isActive("/events") ? "active" : ""
                   }`}
+                  onClick={scrollToTop}
                 >
                   Events
                 </Link>
@@ -65,6 +72,7 @@ const Footer: React.FC = () => {
                   className={`footer-link ${
                     isActive("/academies") ? "active" : ""
                   }`}
+                  onClick={scrollToTop}
                 >
                   Academies
                 </Link>
@@ -75,6 +83,7 @@ const Footer: React.FC = () => {
                   className={`footer-link ${
                     isActive("/about") ? "active" : ""
                   }`}
+                  onClick={scrollToTop}
                 >
                   About Us
                 </Link>
@@ -85,6 +94,7 @@ const Footer: React.FC = () => {
                   className={`footer-link ${
                     isActive("/contact") ? "active" : ""
                   }`}
+                  onClick={scrollToTop}
                 >
                   Contact Us
                 </Link>

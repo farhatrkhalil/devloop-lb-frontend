@@ -12,6 +12,11 @@ const Navbar: React.FC = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  // Function to scroll to top
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+
   useEffect(() => {
     const updateScrollBar = () => {
       const scrollTop = window.scrollY;
@@ -67,6 +72,7 @@ const Navbar: React.FC = () => {
             <Link
               to="/"
               className={`navbar-link ${isActive("/") ? "active" : ""}`}
+              onClick={scrollToTop}
             >
               Home
             </Link>
@@ -75,6 +81,7 @@ const Navbar: React.FC = () => {
             <Link
               to="/events"
               className={`navbar-link ${isActive("/events") ? "active" : ""}`}
+              onClick={scrollToTop}
             >
               Events
             </Link>
@@ -85,6 +92,7 @@ const Navbar: React.FC = () => {
               className={`navbar-link ${
                 isActive("/academies") ? "active" : ""
               }`}
+              onClick={scrollToTop}
             >
               Academies
             </Link>
@@ -93,6 +101,7 @@ const Navbar: React.FC = () => {
             <Link
               to="/about"
               className={`navbar-link ${isActive("/about") ? "active" : ""}`}
+              onClick={scrollToTop}
             >
               About Us
             </Link>
@@ -101,6 +110,7 @@ const Navbar: React.FC = () => {
             <Link
               to="/contact"
               className={`navbar-link ${isActive("/contact") ? "active" : ""}`}
+              onClick={scrollToTop}
             >
               Contact Us
             </Link>
@@ -109,7 +119,11 @@ const Navbar: React.FC = () => {
 
         {/* Right side button */}
         <div className="navbar-right">
-          <Link to="/submit-event" className="submit-event-button">
+          <Link
+            to="/submit-event"
+            className="submit-event-button"
+            onClick={scrollToTop}
+          >
             Submit an Event
           </Link>
         </div>
