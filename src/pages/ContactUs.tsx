@@ -1,7 +1,6 @@
 import React, { useState, useRef } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import Navbar from "../components/Navbar";
-import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import ScrollToTop from "../components/ScrollToTop";
 import "./ContactUs.css";
@@ -96,9 +95,6 @@ const ContactUs: React.FC = () => {
   return (
     <div className="contact-us">
       <Navbar />
-
-      {/* Hero Section */}
-      <Hero />
 
       {/* Contact Form Section */}
       <section className="contact-section">
