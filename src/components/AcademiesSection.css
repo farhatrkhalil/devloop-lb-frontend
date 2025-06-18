@@ -109,7 +109,7 @@
 .academies-cta-button {
   background-color: var(--primary-color);
   color: var(--text-black);
-  border: none;
+  border: 2px solid transparent;
   padding: 1rem 2rem;
   border-radius: 12px;
   font-size: 1rem;
@@ -118,14 +118,15 @@
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease, border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 15px rgba(0, 209, 210, 0.3);
 }
 
 .academies-cta-button:hover {
   background-color: var(--primary-hover);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 209, 210, 0.4);
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0, 209, 210, 0.5);
+  border-color: white;
 }
 
 .academies-cta-button svg {

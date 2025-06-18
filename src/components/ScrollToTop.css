@@ -17,6 +17,7 @@
   opacity: 0;
   visibility: hidden;
   transform: translateY(20px);
+  border: 2px solid transparent;
   z-index: 1000;
 }
 
@@ -30,6 +31,7 @@
   background: var(--primary-hover);
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(0, 209, 210, 0.4);
+  border-color: white;
 }
 
 .scroll-to-top:active {
