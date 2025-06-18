@@ -187,28 +187,30 @@ const Events: React.FC = () => {
         <div className="container">
           {/* Search and Filters */}
           <div className="events-header">
-            <div className="search-container">
-              <input
-                type="text"
-                placeholder="Search events..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="search-input"
-              />
-            </div>
+            <div className="search-filters-group">
+              <div className="search-container">
+                <input
+                  type="text"
+                  placeholder="Search events..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="search-input"
+                />
+              </div>
 
-            <div className="filters">
-              {filters.map((filter) => (
-                <button
-                  key={filter.id}
-                  className={`filter-btn ${
-                    activeFilter === filter.id ? "active" : ""
-                  }`}
-                  onClick={() => setActiveFilter(filter.id)}
-                >
-                  {filter.label}
-                </button>
-              ))}
+              <div className="filters">
+                {filters.map((filter) => (
+                  <button
+                    key={filter.id}
+                    className={`filter-btn ${
+                      activeFilter === filter.id ? "active" : ""
+                    }`}
+                    onClick={() => setActiveFilter(filter.id)}
+                  >
+                    {filter.label}
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
 

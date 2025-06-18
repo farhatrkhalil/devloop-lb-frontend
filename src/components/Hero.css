@@ -52,7 +52,7 @@
 }
 
 .highlight-lb {
-  color: rgb(0, 209, 210);
+  color: rgb(0, 202, 203);
 }
 
 .hero-subtitle {
@@ -83,15 +83,15 @@
 
 .hero-cta:hover {
   transform: translateY(-5px);
-  color: rgb(0, 209, 210);
+  color: rgb(0, 202, 203);
 }
 
 .hero-cta:hover .cta-text {
-  color: rgb(0, 209, 210);
+  color: rgb(0, 202, 203);
 }
 
 .hero-cta:hover .cta-arrow svg path {
-  fill: rgb(0, 209, 210);
+  fill: rgb(0, 202, 203);
 }
 
 .cta-text {
@@ -109,18 +109,24 @@
 }
 
 @keyframes bounce {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-10px);
   }
 }
 
 @keyframes bounce-text {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-10px);
   }
@@ -203,41 +209,63 @@
 }
 
 @keyframes typewriter-cycle {
-  0% { 
+  0% {
     content: "Stay in the (dev) loop through our website which aggregates all the events and learning resources that devs living inside lebanon would be interested in.";
     width: 0;
   }
-  30% { 
+
+  30% {
     content: "Stay in the (dev) loop through our website which aggregates all the events and learning resources that devs living inside lebanon would be interested in.";
     width: 100%;
   }
-  50% { 
+
+  50% {
     content: "Stay in the (dev) loop through our website which aggregates all the events and learning resources that devs living inside lebanon would be interested in.";
     width: 100%;
   }
-  80% { 
+
+  80% {
     content: "Stay in the (dev) loop through our website which aggregates all the events and learning resources that devs living inside lebanon would be interested in.";
     width: 0;
   }
-  100% { 
+
+  100% {
     content: "Stay in the (dev) loop through our website which aggregates all the events and learning resources that devs living inside lebanon would be interested in.";
     width: 0;
   }
 }
 
 @keyframes typewriter-cursor {
-  0% { left: 0; }
-  30% { left: 100%; }
-  50% { left: 100%; }
-  80% { left: 0; }
-  100% { left: 0; }
+  0% {
+    left: 0;
+  }
+
+  30% {
+    left: 100%;
+  }
+
+  50% {
+    left: 100%;
+  }
+
+  80% {
+    left: 0;
+  }
+
+  100% {
+    left: 0;
+  }
 }
 
 @keyframes blink-cursor {
-  0%, 50% {
+
+  0%,
+  50% {
     opacity: 1;
   }
-  51%, 100% {
+
+  51%,
+  100% {
     opacity: 0;
   }
 }

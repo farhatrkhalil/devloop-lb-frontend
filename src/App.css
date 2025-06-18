@@ -1,15 +1,15 @@
 :root {
-  --primary-color: #00d1d2;
-  --primary-hover: #00b8b9;
+  --primary-color: rgb(0, 202, 203);
+  --primary-hover: rgb(0, 182, 183);
   --text-white: #ffffff;
   --text-black: #000000;
   --background-dark: rgba(0, 0, 0, 0.1);
   --background-dark-solid: rgba(0, 0, 0, 0.95);
   --overlay-dark: rgba(0, 0, 0, 0.6);
-  
+
   /* Tag Colors */
-  --tag-turquoise-start: #00d1d2;
-  --tag-turquoise-end: #00b8b9;
+  --tag-turquoise-start: rgb(0, 202, 203);
+  --tag-turquoise-end: rgb(0, 182, 183);
   --tag-purple-start: #9c27b0;
   --tag-purple-end: #ba68c8;
   --tag-green-start: #66bb6a;
@@ -57,6 +57,6 @@ body {
   background: var(--primary-hover);
 }
 
-#root{
+#root {
   width: 100%;
 }
