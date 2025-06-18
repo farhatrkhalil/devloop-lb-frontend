@@ -105,7 +105,7 @@ const ContactUs: React.FC = () => {
               <p className="contact-intro">
                 Have questions about our events, want to collaborate, or just
                 want to say hello? We'd love to hear from you! Fill out the form
-                and we'll get back to you as soon as possible.
+                and we'll get back to you as soon as possible
               </p>
 
               <div className="contact-details">

@@ -127,7 +127,7 @@ const AboutUs: React.FC = () => {
           <h2 className="section-title">Our Team</h2>
           <p className="team-intro">
             DevLoopLB is run by passionate developers and community organizers
-            who are committed to growing Lebanon's tech ecosystem.
+            who are committed to growing Lebanon's tech ecosystem
           </p>
           <div className="team-grid">
             <div className="team-member">
