@@ -202,7 +202,7 @@
   justify-content: center;
   gap: 0.5rem;
   font-size: 0.875rem;
-  color: #cbd5e0;
+  color: #000000;
 }
 
 .type-icon {
@@ -219,12 +219,12 @@
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  color: #ffffff;
+  color: #000000;
   line-height: 1.4;
 }
 
 .event-description {
-  color: #cbd5e0;
+  color: #000000;
   line-height: 1.6;
   margin-bottom: 1.5rem;
   display: -webkit-box;
