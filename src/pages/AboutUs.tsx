@@ -33,7 +33,7 @@ const AboutUs: React.FC = () => {
               Lebanon by connecting developers, students, and tech enthusiasts
               through curated events, workshops, and learning resources. We
               believe in the power of collaboration and knowledge sharing to
-              drive innovation and growth in Lebanon's technology sector.
+              drive innovation and growth in Lebanon's technology sector
             </p>
           </div>
         </div>
@@ -162,7 +162,7 @@ const AboutUs: React.FC = () => {
             <h2 className="section-title">Join Our Community</h2>
             <p className="join-us-text">
               Ready to be part of Lebanon's fastest-growing developer community?
-              Join us for events, workshops, and connect with fellow developers.
+              Join us for events, workshops, and connect with fellow developers
             </p>
             <div className="join-us-buttons">
               <Link to="/contact" className="btn btn-primary">
